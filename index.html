@@ -1,69 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/estilo.css">
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/estilo.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
     <title>Fashion Driven</title>
 </head>
+
 <body>
     <div class="top">
-        <img class="logo"src="./images/Group.png" alt="">
+        <img class="logo" src="./images/Group.png">
     </div>
-    <div class="container">
-        <div class="choices">
-            <div class="choicesBox">
-                <h3>Escolha o modelo</h3>
-                <div class="model">
-                    <img class="imgModel" src="./images/tshirt.png" alt="">
-                    <p>T-shirt</p>
-                    <img class="imgModel" src="./images/Camiseta.png" alt="">
-                    <p>Camiseta</p>
-                    <img class="imgModel" src="./images/Mangalonga.png" alt="">
-                    <p>Manga longa</p>
+
+    <main>
+        <div class="container">
+            <div class="choices">
+
+                <div class="choice-box">
+                    <p>Escolha o modelo</p>
+
+                    <div class="container-box">
+                        <div class="box modelo">
+                            <div class="container-border" id="t-shirt" onclick="selecionarModelo(this)">
+                                <img src="./images/tshirt.png">
+                            </div>
+                            <p>T-shirt</p>
+                        </div>
+
+                        <div class="box modelo">
+                            <div class="container-border" id="top-tank" onclick="selecionarModelo(this)">
+                                <img src="./images/Camiseta.png">
+                            </div>
+                            <p>Camiseta</p>
+                        </div>
+
+                        <div class="box modelo">
+                            <div class="container-border" id="long" onclick="selecionarModelo(this)">
+                                <img src="./images/Mangalonga.png">
+                            </div>
+                            <p>Manga longa</p>
+                        </div>
+                    </div>
                 </div>
-                <h3>Escolha a gola</h3>
-                <div class="model">
-                    <img class="imgModel" src="./images/v-neck.png" alt="">
-                    <p>Gola V</p>
-                    <img class="imgModel" src="./images/shirt 1.png" alt="">
-                    <p>Gola redonda</p>
-                    <img class="imgModel" src="./images/polo-shirt.png" alt="">
-                    <p>Gola polo</p>
+
+
+                <div class="choice-box">
+                    <p>Escolha a gola</p>
+
+                    <div class="container-box">
+                        <div class="box gola">
+                            <div class="container-border" id="v-neck" onclick="selecionarGola(this)">
+                                <img src="./images/v-neck.png">
+                            </div>
+                            <p>Gola V</p>
+                        </div>
+
+                        <div class="box gola">
+                            <div class="container-border" id="round" onclick="selecionarGola(this)">
+                                <img src="./images/shirt 1.png">
+                            </div>
+                            <p>Gola Redonda</p>
+                        </div>
+
+                        <div class="box gola">
+                            <div class="container-border" id="polo" onclick="selecionarGola(this)">
+                                <img src="./images/polo-shirt.png">
+                            </div>
+                            <p>Gola Polo</p>
+                        </div>
+                    </div>
                 </div>
-                <h3>Escolha o tecido</h3>
-                <div class="model">
-                    <img class="imgModel" src="./images/Seda.png" alt="">
-                    <p>Seda</p>
-                    <img class="imgModel" src="./images/Algodão.png" alt="">
-                    <p>Algodão</p>
-                    <img class="imgModel" src="./images/Poliester.png" alt="">
-                    <p>Poliéster</p>
+
+                <div class="choice-box">
+                    <p>Escolha o tecido</p>
+
+                    <div class="container-box">
+                        <div class="box tecido">
+                            <div class="container-border" id="silk" onclick="selecionarTecido(this)">
+                                <img src="./images/Seda.png">
+                            </div>
+                            <p>Seda</p>
+                        </div>
+
+                        <div class="box tecido">
+                            <div class="container-border" id="cotton" onclick="selecionarTecido(this)">
+                                <img src="./images/Algodão.png">
+                            </div>
+                            <p>Algodão</p>
+                        </div>
+
+                        <div class="box tecido">
+                            <div class="container-border" id="polyester" onclick="selecionarTecido(this)">
+                                <img src="./images/Poliester.png">
+                            </div>
+                            <p>Poliéster</p>
+                        </div>
+                    </div>
                 </div>
-                <h3>Imagem de referência</h3>
-                <input placeholder="Insira o link" type="url">
-                <button class="order">Confirmar pedido</button>
+
+                <div class="img-ref">
+                    <p>Imagem de referência</p>
+                    <input type="url" class="image" onchange="salvarImagem()" placeholder="Insira o link" />
+                </div>
+                <button class="botao" onclick="encomendarBlusa()">Confirmar pedido</button>
             </div>
         </div>
-        <div class="artConcept">
-            <img class="art" src="./images/ilustração.png" alt="">
+
+        <div class="imagem">
+            <img src="./images/ilustração.png">
         </div>
-    </div>
+
+    </main>
+
     <div class="bottom">
-        <h2>Ultimos pedidos</h2>
-        <div class="lastOrders">
-            <img class="imgShirts"src="./images/Blusa1.png" alt="">
-            <p class="name"><strong>Criador: </strong> Agata</p>
-            <img class="imgShirts"src="./images/Blusa2.png" alt="">
-            <p class="name"><strong>Criador: </strong> Bruna</p>
-            <img class="imgShirts" src="./images/Blusa3.png" alt="">
-            <p class="name"><strong>Criador: </strong> Camila</p>
-            <img class="imgShirts" src="./images/Blusa4.png" alt="">
-            <p class="name"><strong>Criador: </strong> Daniel</p>
-            <img class="imgShirts" src="./images/Blusa5.png" alt="">
-            <p class="name"><strong>Criador: </strong> Ester</p>
+        <p class="title-bottom">Últimos pedidos</p>
+
+        <div class="container-order">
+
         </div>
-    </div>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js.js"></script>
 </body>
+
+</html>
