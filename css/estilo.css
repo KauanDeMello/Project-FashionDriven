@@ -4,6 +4,10 @@ body{
 
 *{box-sizing: border-box;}
 
+strong{
+    font-weight: bold;
+}
+
 .top{
     width: 1366px;
     height: 89px;
@@ -18,6 +22,7 @@ body{
 
 .container{
     width: 1366px;
+    height: auto;
     margin: auto;
     display: flex;
 }
@@ -46,7 +51,6 @@ h3{
 }
 
 .choicesBox{
-    background-color: wheat;
     width: 500px;
     height: 680px;
     margin-top: 40px;
@@ -55,7 +59,6 @@ h3{
 }
 
 .model{
-    background-color: pink;
     width: auto;
     height: 110px;
     margin-top: 8px;
@@ -98,6 +101,7 @@ p{
     align-items: center;
 }
 
+
 ::placeholder{
     background-color: #f2f2f2;
     font-family: 'Roboto';
@@ -133,7 +137,11 @@ input{
     width: 1366px;
     height: 342px;
     margin: auto;
-    background-color: red;
+}
+
+.imgShirts{
+    width: 180px;
+    height: 180px;
 }
 
 h2{
@@ -142,10 +150,10 @@ font-size: 24px;
 font-weight: 400;
 color: #232322;
 margin-left: 115px;
+margin-top: 25px;
 }
 
 .lastOrders{
-    background-color: wheat;
     width: 1100px;
     height: 250px;
     margin-top: 31px;
@@ -156,4 +164,10 @@ margin-left: 115px;
     align-content: stretch;
     align-items: baseline;
     overflow: hidden;
+}
+
+.name{
+    font-family: 'Roboto';
+    font-size: 20px;
+    margin-left: 25px;
 }
